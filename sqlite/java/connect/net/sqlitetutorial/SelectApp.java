@@ -7,18 +7,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.PreparedStatement;
 
-/**
- *
- * @author sqlitetutorial.net
- */
 public class SelectApp {
 
-    /**
-     * Connect to the test.db database
-     * @return the Connection object
-     */
     private Connection connect() {
-        // SQLite connection string
         String url = "jdbc:sqlite:C://Assignment/sqlite/db/test.db";
         Connection conn = null;
         try {
@@ -29,10 +20,6 @@ public class SelectApp {
         return conn;
     }
 
-    
-    /**
-     * select all rows in the warehouses table
-     */
    public void selectAll(){
         String sql = "SELECT movie_name,lead_actor,lead_actress,year_of_Release,director_name FROM Movies";
         
@@ -40,7 +27,7 @@ public class SelectApp {
              Statement stmt  = conn.createStatement();
              ResultSet rs    = stmt.executeQuery(sql)){
             
-            // loop through the result set
+            
             while (rs.next()) {
                 System.out.println(rs.getString("movie_name") +  "\t" + 
                                    rs.getString("lead_actor") + "\t" +
