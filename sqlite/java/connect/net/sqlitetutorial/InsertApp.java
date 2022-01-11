@@ -7,11 +7,7 @@ import java.sql.SQLException;
 
 public class InsertApp {
 
-    /**
-     * Connect to the test.db database
-     *
-     * @return the Connection object
-     */
+    
     private Connection connect() {
         // SQLite connection string
         String url = "jdbc:sqlite:C://Assignment/sqlite/db/test.db";
@@ -44,7 +40,7 @@ public class InsertApp {
     public static void main(String[] args) {
 
         InsertApp app = new InsertApp();
-        // insert three new rows
+	    
         app.insert("3-Idiots","Amir Khan","Kareena Kapoor",2009,"Rajkumar Hirani");
         app.insert("Golmaal","Ajay Devgan","Rimi Sen",2006,"Rohit Shetty");
         app.insert("Hera Pheri","Akshay Kumar","Tabu",2000,"Priyadarshan");
