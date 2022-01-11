@@ -5,10 +5,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-/**
- *
- * @author sqlitetutorial.net
- */
 public class InsertApp {
 
     /**
@@ -28,12 +24,7 @@ public class InsertApp {
         return conn;
     }
 
-    /**
-     * Insert a new row into the warehouses table
-     *
-     * @param name
-     * @param capacity
-     */
+    
     public void insert(String movie_name,String lead_actor,String lead_actress,Integer year_of_Release,String director_name) {
         String sql = "INSERT INTO Movies(movie_name,lead_actor,lead_actress,year_of_Release,director_name) VALUES(?,?,?,?,?)";
 
@@ -50,9 +41,6 @@ public class InsertApp {
         }
     }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
 
         InsertApp app = new InsertApp();
