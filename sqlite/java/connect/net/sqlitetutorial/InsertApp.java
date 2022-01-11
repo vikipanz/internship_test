@@ -9,7 +9,7 @@ public class InsertApp {
 
     
     private Connection connect() {
-        // SQLite connection string
+        
         String url = "jdbc:sqlite:C://Assignment/sqlite/db/test.db";
         Connection conn = null;
         try {
